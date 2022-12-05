@@ -1,0 +1,7 @@
+extends layout
+
+block content
+  include mixins/cardCard
+  div.container
+    each card in cards
+      +cardCard(card)

@@ -1,0 +1,44 @@
+mixin cardCard(card)
+
+    div.card
+        div.card-header
+            div.card-name=card.name
+            div.card-hp=card.hp
+            div.card-type
+                span &#x26A1;
+        div.card-image
+            img.card-header-image(src=card.image)
+        div.card-body
+            div.card-power-one
+                div.cost
+                    span &#x26A1;
+                div.name=card.powerOne
+                div.damage=card.powerOneDamage
+            hr
+            div.card-power-two
+                div.cost
+                    span &#x26A1
+                    span &#x26A1
+                div.name=card.powerTwo
+                div.damage=card.powerTwoDamage
+            hr
+            div.card-info
+                div.weakness
+                    |weakness
+                div.resistance
+                    |resistance
+                div.retreat
+                    |retreat
+            div.info-cost
+                div.weakness
+                    -for(let i = 0; i < card.weakness; i++)
+                    span &#x26A1;
+                div.resistance
+                    -for(let i = 0; i < card.resistance; i++)
+                    span &#x26A1;
+                div.retreat
+                    -for(let i = 0; i < card.retreat; i++)
+                    span &#x26A1
+        div.card-user
+            div.edit
+                a(href='#') Edit
