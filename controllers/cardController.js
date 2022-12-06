@@ -5,6 +5,16 @@ module.exports.viewAll = async function(req, res, next) {
     res.render('index', {cards});
 }
 
+module.exports.renderEditForm = async function(req, res, next) {
+    const card = await Card.findByPk(
+        req.params.id
+    );
+    res.render('edit', {card});
+}
+
+
+
+
 // module.exports.viewAll = function(req, res, next) {
 //     const cards = [{
 //         id: 1,

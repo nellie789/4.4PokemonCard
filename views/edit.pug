@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    div.form-panel
+        div.header Edit Card
+            form(action=`/edit/${card.id}` method='post')
+                div.form-input
+                    label(for='name') Name:
+                    input(type='text' id='name' name='name' value=card.name)
+                div.form-input
+                    label(for='hp') HP:
+                    input(type='text' id='hp' name='hp' value=card.hp)
+                div.form-input
+                    label(for='image') Image URL:
+                    input(type='text' id='image' name='image' value=card.image)
+                div.form-input
+                    label(for='powerOne') Power One:
+                    input(type='text' id='powerOne' name='powerOne' value=card.powerOne)
+                div.form-input
+                    label(for='powerOneDamage') Power One Damage:
+                    input(type='text' id='powerOneDamage' name='powerOneDamage' value=card.powerOneDamage)
+                div.form-input
+                    label(for='powerTwo') Power Two:
+                    input(type='text' id='powerTwo' name='powerTwo' value=card.powerTwo)
+                div.for-input
+                    label(for='powerTwoDamage') Power Two Damage:
+                    input(type='text' id='powerTwoDamage' name='powerTwoDamage' value=card.powerTwoDamage)
+                div.for-input
+                    label(for='weakness') Weakness:
+                    select(id='weakness' name='weakness' autocomplete='off')
+                        -for(let i = 1; i <= 3; i++)
+                            option(value=i selected = (weakness === card.weakness)) #{i}
+                div.for-input
+                    label(for='resistance') Resistance:
+                    select(id='resistance' name='resistance' autocomplete='off')
+                        -for(let i = 1; i <= 3; i++)
+                            option(value=i selected = (resistance === card.resistance)) #{i}
+                div.for-input
+                    label(for='retreat') Retreat:
+                    select(id='retreat' name='retreat' autocomplete='off')
+                        -for(let i = 1; i <= 3; i++)
+                            option(value=i selected = (retreat === card.retreat)) #{i}
+                div.button-row
+                    a.button.cancel(href='/') Cancel
+                    a.button.delete(href=`/delete/${card.id}`) Delete
+                    button.button.save(type='submit') Submit
