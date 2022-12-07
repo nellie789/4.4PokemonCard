@@ -3,5 +3,8 @@ extends layout
 block content
   include mixins/cardCard
   div.container
+    div.add-button-row
+      a.button.save(href="/add") Add Card
+  div.container
     each card in cards
       +cardCard(card)

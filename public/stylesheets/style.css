@@ -8,11 +8,12 @@ body {
   padding: 48px;
   display: flex;
   gap: 16px;
+  flex-wrap:wrap;
 }
 .card {
   background: white;
   border-radius: 16px;
-  width: 350px;
+  width: 275px;
   position: relative;
   overflow: hidden;
 }
@@ -73,4 +74,22 @@ body {
 .edit a{
   text-decoration: none;
   color: #00B7FF
+}
+.button {
+  display: block;
+  border-radius: 6px;
+  padding: 8px 16px;
+  text-decoration: none;
+  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  font-size: 14px;
+  line-height: 1.25rem;
+}
+.button.save {
+  background: #155E75;
+  color: white;
+  border: 1px solid #164E63;
+}
+.add-button-row {
+  display: flex;
+  justify-content: flex-start;
 }

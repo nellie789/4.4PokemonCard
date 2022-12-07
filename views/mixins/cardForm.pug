@@ -1,0 +1,40 @@
+mixin cardForm(card, actionURL, mode, title)
+
+    div.form-panel
+        div.header= title
+            form(action=actionURL method='post')
+                div.form-input
+                    label(for='name') Name:
+                    input(type='text' id='name' name='name' value=card.name)
+                div.form-input
+                    label(for='hp') HP:
+                    input(type='text' id='hp' name='hp' value=card.hp)
+                div.form-input
+                    label(for='image') Image URL:
+                    input(type='text' id='image' name='image' value=card.image)
+                div.form-input
+                    label(for='powerOne') Power One:
+                    input(type='text' id='powerOne' name='powerOne' value=card.powerOne)
+                div.form-input
+                    label(for='powerOneDamage') Power One Damage:
+                    input(type='text' id='powerOneDamage' name='powerOneDamage' value=card.powerOneDamage)
+                div.form-input
+                    label(for='powerTwo') Power Two:
+                    input(type='text' id='powerTwo' name='powerTwo' value=card.powerTwo)
+                div.for-input
+                    label(for='powerTwoDamage') Power Two Damage:
+                    input(type='text' id='powerTwoDamage' name='powerTwoDamage' value=card.powerTwoDamage)
+                div.for-input
+                    label(for='weakness') Weakness:
+                    input(type='text' id='weakness' name='weakness' value=card.weakness)
+                div.for-input
+                    label(for='resistance') Resistance:
+                    input(type='text' id='resistance' name='resistance' value=card.resistance)
+                div.for-input
+                    label(for='retreat') Retreat:
+                    input(type='text' id='retreat' name='retreat' value=card.retreat)
+                div.button-row
+                    a.button.cancel(href='/') Cancel
+                    if (mode==='edit')
+                        a.button.delete(href=`/delete/${card.id}`) Delete
+                    button.button.save(type='submit') Submit
