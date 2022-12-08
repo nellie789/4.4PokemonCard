@@ -30,14 +30,11 @@ mixin cardCard(card)
                 div.retreat
                     |retreat
             div.info-cost
-                div.weakness
-                    -for(let i = 0; i < card.weakness; i++)
+                div.weakness=card.weakness
                     span &#x26A1;
-                div.resistance
-                    -for(let i = 0; i < card.resistance; i++)
+                div.resistance=card.resistance
                     span &#x26A1;
-                div.retreat
-                    -for(let i = 0; i < card.retreat; i++)
+                div.retreat=card.retreat
                     span &#x26A1
         div.card-user
             div.edit
