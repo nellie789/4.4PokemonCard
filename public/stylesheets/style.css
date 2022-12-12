@@ -11,15 +11,18 @@ body {
   flex-wrap:wrap;
 }
 .card {
-  background: white;
+  background: rgba(255, 221, 46, 0.45);
   border-radius: 16px;
+  border-style: solid;
+  border-color: #ffdc30;
   width: 275px;
   position: relative;
   overflow: hidden;
 }
 .card-header-image {
-  width: 100%;
+  width: 95%;
   height: 200px;
+  padding: 0px 5px 0px 6px;
 }
 .card-name {
   text-align: left;
@@ -92,4 +95,17 @@ body {
 .add-button-row {
   display: flex;
   justify-content: flex-start;
+}
+.category {
+  color: #6b7280;
+  font-size: 18px;
+}
+.category {
+  color: #6b7280;
+  font-size: 18px;
+}
+.card-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
