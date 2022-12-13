@@ -33,6 +33,9 @@ mixin cardForm(card, actionURL, mode, title)
                 div.for-input
                     label(for='retreat') Retreat:
                     input(type='text' id='retreat' name='retreat' value=card.retreat)
+                div.for-input
+                    label(for='category') Category:
+                    input(type='text' id='category' name='category' value=card.category)
                 div.button-row
                     a.button.cancel(href='/') Cancel
                     if (mode==='edit')

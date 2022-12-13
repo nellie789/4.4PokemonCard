@@ -37,6 +37,6 @@ mixin cardCard(card)
                 div.retreat=card.retreat
                     span &#x26A1
         div.card-user
-            div.category Electric
+            div.category=card.category
             div.edit
                 a(href=`/edit/${card.id}`) Edit

@@ -23,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     powerTwoDamage:DataTypes.INTEGER,
     weakness:DataTypes.INTEGER,
     resistance:DataTypes.INTEGER,
-    retreat:DataTypes.INTEGER
+    retreat:DataTypes.INTEGER,
+    category:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Card',
