@@ -1,5 +1,5 @@
 const {Card}= require('../models')
-const categories = ['Electric', 'Flying'];
+const categories = ['Electric', 'Dragon', 'Rock', 'Fairy', 'Steel', 'Dark', 'Ice', 'Flying'];
 
 module.exports.viewAll = async function(req, res, next) {
     let searchCategories = ['All'];
